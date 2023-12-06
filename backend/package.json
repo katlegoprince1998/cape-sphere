@@ -1,8 +1,8 @@
 {
-  "name": "backend",
+  "name": "database-examples",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "conn.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "nodemon": "^3.0.1",
+    "fs": "^0.0.1-security",
+    "mysql2": "^3.6.5",
+    "nodemon": "^3.0.2",
+    "path": "^0.12.7",
     "sequelize": "^6.35.1",
     "sequelize-cli": "^6.6.2"
   }

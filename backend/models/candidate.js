@@ -1,0 +1,84 @@
+module.exports=(sequelize,DataTypes)=>{
+    const Candidate=sequelize.define("Candidate",{
+cand_id:{
+    type:DataTypes.INTEGER,
+    allowNull:false,
+    validate:{
+        notEmpty:true,
+    },
+},
+cand_name:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    validate:{
+        notEmpty:true,
+    },
+},
+cand_surname:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_id_no:{
+    type:DataTypes.INTEGER,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_phone:{
+    type:DataTypes.INTEGER,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_email:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_nok_name:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_nok_surname:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_nok_phone:{
+    type:DataTypes.INTEGER,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_nok_relationship:{
+    type:DataTypes.STRING,
+    allowNull:false,
+    validate:{
+    notEmpty:true,
+   },
+},
+cand_medical_info:{
+    type:DataTypes.STRING,
+    allowNull:true,
+    validate:{
+    notEmpty:true,
+   },
+}
+
+    });
+    return Candidate;
+};
+
