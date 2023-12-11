@@ -468,7 +468,7 @@ export const links = [
     title: 'Pages',
     links: [
       {
-        name: 'orders',
+        name: 'recommendations',
         icon: <AiOutlineShoppingCart />,
       },
       {
@@ -858,7 +858,7 @@ export const ordersGrid = [
     textAlign: 'Center',
   },
   {
-    field: 'TotalAmount',
+    field: 'OverallTech',
     headerText: 'Overall Tech',
     format: 'P',
     textAlign: 'Center',
@@ -1335,7 +1335,7 @@ export const employeesData = [
     EmployeeImage:
     avatar2,
 
-  // },
+  },
   // {
   //   EmployeeID: 2,
   //   Name: 'Nasimiyu Danai',
@@ -1628,7 +1628,7 @@ export const ordersData = [
   {
     OrderID: 'Available',
     CustomerName: 'Yes',
-    TotalAmount: 93,
+    OverallTech: 93,
     OrderItems: '1',
     Location: 'Recommended',
     Status: 'Low',
@@ -1639,7 +1639,8 @@ export const ordersData = [
   {
     OrderID: 893486,
     CustomerName: 'Anika Viseer',
-    TotalAmount: 93.31,
+    OverallTech: 93.31,
+
     OrderItems: 'Night Lamp',
     Location: 'Germany',
     Status: 'Medium',
@@ -1650,7 +1651,7 @@ export const ordersData = [
   {
     OrderID: 748975,
     CustomerName: 'Miron Vitold',
-    TotalAmount: 23.99,
+    OverallTech: 0.23,
     OrderItems: 'Healthcare Erbology',
     Location: 'Spain',
     Status: 'High',

@@ -4,7 +4,7 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Courses, Orders, Calendar, Grades, Stacked, Pyramid, ViewCourses, ToDo, Line, Area, Bar, Pie, Financial, ColorMapping, Notes } from './pages';
+import { Courses, Recommendations, Calendar, Grades, Stacked, Pyramid, ViewCourses, ToDo, Line, Area, Bar, Pie, Financial, ColorMapping, Notes } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
@@ -70,7 +70,7 @@ const App = () => {
                 <Route path="/courses" element={(<Courses />)} />
 
                 {/* pages  */}
-                <Route path="/orders" element={<Orders />} />
+                <Route path="/recommendations" element={<Recommendations />} />
                 <Route path="/grades" element={<Grades />} />
                 <Route path="/My-Courses" element={<ViewCourses />} />
 
