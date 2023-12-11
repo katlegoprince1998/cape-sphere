@@ -1,10 +1,9 @@
 export { default as Courses } from './Courses';
-export { default as Kanban } from './Kanban';
+export { default as ToDo } from './ToDo';
 export { default as Orders } from './Orders';
 export { default as Grades } from './Grades';
-export { default as Editor } from './Editor';
+export { default as Notes } from './Notes';
 export { default as ViewCourses } from './ViewCourses';
-export { default as ColorPicker } from './ColorPicker';
 export { default as Calendar } from './Calendar';
 export { default as Area } from './Charts/Area';
 export { default as Bar } from './Charts/Bar';
