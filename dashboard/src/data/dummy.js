@@ -1067,6 +1067,7 @@ export const ordersGrid = [
     format: 'yMd',
   },
 
+<<<<<<< HEAD
   // {
   //   headerText: 'Image',
   //   template: gridOrderImage,
@@ -1075,6 +1076,8 @@ export const ordersGrid = [
   // },
  
 
+=======
+>>>>>>> 7e47cf7c36add0c96c45ccc1d1c0eb8666b096b4
   { field: 'CustomerName',
     headerText: 'Placement Ready',
     width: '150',
