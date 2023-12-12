@@ -1818,7 +1818,7 @@ export const employeesData = [
   //   ReportsTo: 'Carson',
   //   EmployeeImage:
   //     avatar2,
- },
+//  },
 ];
 
 export const ordersData = [
