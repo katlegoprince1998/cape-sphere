@@ -1,14 +1,16 @@
 import React from 'react';
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+import { AiOutlineCalendar, AiOutlineMonitor,AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
+import { MdOutlineSupervisorAccount, MdOutlineGrade } from 'react-icons/md';
+
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
+import { GiProgression } from "react-icons/gi";
+import { VscFileSubmodule } from "react-icons/vsc";
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
@@ -22,6 +24,10 @@ import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
+
+import icon1 from "../data/coursesIcon.png";
+
+
 
 export const gridOrderImage = (props) => (
   <div>
@@ -425,7 +431,8 @@ export const links = [
     links: [
       {
         name: 'courses',
-        icon: <FiShoppingBag />,
+        icon: <VscFileSubmodule />,
+
       },
     ],
   },
@@ -435,15 +442,15 @@ export const links = [
     links: [
       {
         name: 'recommendations',
-        icon: <AiOutlineShoppingCart />,
+        icon: <AiOutlineMonitor />,
       },
       {
         name: 'grades',
-        icon: <IoMdContacts />,
+        icon: <MdOutlineGrade />,
       },
       {
         name: 'My-Courses',
-        icon: <RiContactsLine />,
+        icon: <VscFileSubmodule />,
       },
     ],
   },
@@ -1818,7 +1825,7 @@ export const employeesData = [
   //   ReportsTo: 'Carson',
   //   EmployeeImage:
   //     avatar2,
- },
+//  },
 ];
 
 export const ordersData = [
@@ -2556,13 +2563,13 @@ export const scheduleData = [
 ];
 export const lineChartData = [
   [
-    { x: new Date(2005, 0, 1), y: 21 },
-    { x: new Date(2006, 0, 1), y: 24 },
-    { x: new Date(2007, 0, 1), y: 36 },
-    { x: new Date(2008, 0, 1), y: 38 },
-    { x: new Date(2009, 0, 1), y: 54 },
-    { x: new Date(2010, 0, 1), y: 57 },
-    { x: new Date(2011, 0, 1), y: 70 },
+    { x: new Date(2023, 0, 1), y: 21 },
+    { x: new Date(2023, 1, 5), y: 24 },
+    { x: new Date(2023, 2, 8), y: 36 },
+    { x: new Date(2023, 3, 9), y: 38 },
+    { x: new Date(2023, 4, 10), y: 54 },
+    { x: new Date(2023, 5, 15), y: 57 },
+    { x: new Date(2023, 6, 20), y:50 },
   ],
   [
     { x: new Date(2005, 0, 1), y: 28 },
