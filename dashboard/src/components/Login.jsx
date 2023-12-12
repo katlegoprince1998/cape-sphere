@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
 import Image from "../data/logo.png";
 
-const LoginForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleSubmit = async(e) => {
-    e.preventDefault();
-    // handle login logic here
-    window.location.href = "/courses";
-    const loggedIn = await login(email, password);
-    setIsLoggedIn(loggedIn);
-    if (loggedIn) {
-        alert("Success");
-      // Store token/user info in local storage or session storage
-      localStorage.setItem("isLoggedIn", true);
-      // Redirect to your app page
-      // (Replace with your actual redirect logic using react-router-dom)
-      window.location.href = "../App.js";
-    } else {
-      // Show error message
-      alert("Invalid username or password!");
-    }
+
+const LoginForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch("http://localhost:5454/auth/signing", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      credentials: 'include',
+      body: JSON.stringify({
+        email,
+        password
+      })
+      
+    });
+
+    const content = await response.json();
+    console.log(content);
+    
+
   };
+
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -37,8 +42,9 @@ const LoginForm = () => {
             type="email"
             id="email"
             placeholder="Enter your email"
+            name="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+             onChange={(e) => setEmail(e.target.value)}
             style={styles.input}
           />
         </div>
@@ -47,9 +53,10 @@ const LoginForm = () => {
           <input
             type="password"
             id="password"
+            name="password"
             placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+           value={password}
+             onChange={(e) => setPassword(e.target.value)}
             style={styles.input}
           />
         </div>

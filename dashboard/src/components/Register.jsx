@@ -9,9 +9,20 @@ const RegisterForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     // handle registration logic here
+    const data = new FormData(event.currentTarget);
+
+    const userData={
+      firstName:data.get("firstname"),
+      lastName:data.get("lastName"),
+      idNumber:data.get("idNumber"),
+      phoneNumber:data.get("phoneNumber"),
+      email:data.get(ëmail),
+      password:data.get("password")
+    }
+
   };
 
   return (
