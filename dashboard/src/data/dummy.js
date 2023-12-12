@@ -476,10 +476,10 @@ export const links = [
       },
   
 
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
+      // {
+      //   name: 'bar',
+      //   icon: <AiOutlineBarChart />,
+      // },
      
     ],
   },
@@ -1067,7 +1067,7 @@ export const ordersGrid = [
     format: 'yMd',
   },
 
-<<<<<<< HEAD
+
   // {
   //   headerText: 'Image',
   //   template: gridOrderImage,
@@ -1076,8 +1076,7 @@ export const ordersGrid = [
   // },
  
 
-=======
->>>>>>> 7e47cf7c36add0c96c45ccc1d1c0eb8666b096b4
+
   { field: 'CustomerName',
     headerText: 'Placement Ready',
     width: '150',
@@ -1302,32 +1301,32 @@ export const scheduleData = [
 ];
 export const lineChartData = [
   [
-    { x: new Date(2023, 0, 1), y: 21 },
-    { x: new Date(2023, 1, 5), y: 24 },
-    { x: new Date(2023, 2, 8), y: 36 },
-    { x: new Date(2023, 3, 9), y: 38 },
-    { x: new Date(2023, 4, 10), y: 54 },
-    { x: new Date(2023, 5, 15), y: 57 },
-    { x: new Date(2023, 6, 20), y:50 },
+    { x: new Date(2023, 1, 1), y: 21 },
+    { x: new Date(2023, 2, 5), y: 24 },
+    { x: new Date(2023, 3, 8), y: 36 },
+    { x: new Date(2023, 4, 9), y: 38 },
+    { x: new Date(2023, 5, 10), y: 54 },
+    { x: new Date(2023, 6, 15), y: 57 },
+    { x: new Date(2023, 7, 20), y:50 },
   ],
   [
-    { x: new Date(2005, 0, 1), y: 28 },
-    { x: new Date(2006, 0, 1), y: 44 },
-    { x: new Date(2007, 0, 1), y: 48 },
-    { x: new Date(2008, 0, 1), y: 50 },
-    { x: new Date(2009, 0, 1), y: 66 },
-    { x: new Date(2010, 0, 1), y: 78 },
-    { x: new Date(2011, 0, 1), y: 84 },
+    { x: new Date(2023, 1, 1), y: 28 },
+    { x: new Date(2023, 2, 5), y: 44 },
+    { x: new Date(2023, 3, 8), y: 48 },
+    { x: new Date(2023, 4, 9), y: 50 },
+    { x: new Date(2023, 5, 1), y: 66 },
+    { x: new Date(2023, 6, 1), y: 78 },
+    { x: new Date(2023, 7, 1), y: 84 },
   ],
 
   [
-    { x: new Date(2005, 0, 1), y: 10 },
-    { x: new Date(2006, 0, 1), y: 20 },
-    { x: new Date(2007, 0, 1), y: 30 },
-    { x: new Date(2008, 0, 1), y: 39 },
-    { x: new Date(2009, 0, 1), y: 50 },
-    { x: new Date(2010, 0, 1), y: 70 },
-    { x: new Date(2011, 0, 1), y: 100 },
+    { x: new Date(2023, 1, 1), y: 10 },
+    { x: new Date(2023, 2, 1), y: 20 },
+    { x: new Date(2023, 3, 1), y: 30 },
+    { x: new Date(2023, 4, 1), y: 39 },
+    { x: new Date(2023, 5, 1), y: 50 },
+    { x: new Date(2023, 6, 1), y: 70 },
+    { x: new Date(2023, 7, 1), y: 100 },
   ],
 ];
 export const dropdownData = [
@@ -1356,7 +1355,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'JCS',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -1364,7 +1363,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Tech',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -1372,7 +1371,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'India',
+    name: 'Presentations',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },

@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-      {/* {isLoggedIn ? ( */}
+      {isLoggedIn ? (
       <div className='App'>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
@@ -100,9 +100,9 @@ const App = () => {
       </BrowserRouter>
     
       </div>
-      {/* ) : (
+       ) : (
         <LoginForm />
-      )} */}
+      )} 
     </div>
   );
 };
