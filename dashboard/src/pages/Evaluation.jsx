@@ -4,11 +4,11 @@ import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, Context
 import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
 import { Header } from '../components';
 
-const Recommendations = () => {
+const Evaluation = () => {
   const editing = { allowDeleting: true, allowEditing: true };
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
-      <Header category="Page" title="Recommendations" />
+      <Header category="Page" title="Evaluation" />
       <GridComponent
         id="gridcomp"
         dataSource={ordersData}
@@ -28,4 +28,4 @@ const Recommendations = () => {
     </div>
   );
 };
-export default Recommendations;
+export default Evaluation;

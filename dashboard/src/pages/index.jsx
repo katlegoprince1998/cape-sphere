@@ -1,6 +1,6 @@
 export { default as Courses } from './Courses';
 export { default as ToDo } from './ToDo';
-export { default as Recommendations } from './Recommendations';
+export { default as Evaluation } from './Evaluation';
 export { default as Grades } from './Grades';
 export { default as Notes } from './Notes';
 export { default as ViewCourses } from './ViewCourses';

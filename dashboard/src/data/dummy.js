@@ -434,7 +434,7 @@ export const links = [
     title: 'Pages',
     links: [
       {
-        name: 'recommendations',
+        name: 'evaluation',
         icon: <AiOutlineShoppingCart />,
       },
       {
@@ -1032,37 +1032,38 @@ export const userProfileData = [
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
   },
-  {
-    icon: <BsShield />,
-    title: 'My Inbox',
-    desc: 'Messages & Emails',
-    iconColor: 'rgb(0, 194, 146)',
-    iconBg: 'rgb(235, 250, 242)',
-  },
-  {
-    icon: <FiCreditCard />,
-    title: 'My Tasks',
-    desc: 'To-do and Daily Tasks',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
-  },
+  // {
+  //   icon: <BsShield />,
+  //   title: 'My Inbox',
+  //   desc: 'Messages & Emails',
+  //   iconColor: 'rgb(0, 194, 146)',
+  //   iconBg: 'rgb(235, 250, 242)',
+  // },
+  // {
+  //   icon: <FiCreditCard />,
+  //   title: 'My Tasks',
+  //   desc: 'To-do and Daily Tasks',
+  //   iconColor: 'rgb(255, 244, 229)',
+  //   iconBg: 'rgb(254, 201, 15)',
+  // },
 ];
 
 export const ordersGrid = [
-  // {
-  //   headerText: 'Image',
-  //   template: gridOrderImage,
-  //   textAlign: 'Center',
-  //   width: '120',
-  // },
   {
-    field: 'OrderItems',
-    headerText: 'Evaluation ID',
+    field: 'Course',
+    headerText: 'Course Name',
+    width: '120',
+    textAlign: 'Center',
+  },
+  {
+    field: 'EvaluationDate',
+    headerText: 'Evaluation Date',
     width: '150',
     editType: 'dropdownedit',
     textAlign: 'Center',
+    format: 'yMd',
   },
-  { field: 'CustomerName',
+  { field: 'Placement',
     headerText: 'Placement Ready',
     width: '150',
     textAlign: 'Center',
@@ -1070,7 +1071,7 @@ export const ordersGrid = [
   {
     field: 'OverallTech',
     headerText: 'Overall Tech',
-    format: 'P',
+    format: 'P2',
     textAlign: 'Center',
     editType: 'numericedit',
     width: '150',
@@ -1083,15 +1084,15 @@ export const ordersGrid = [
     width: '120',
   },
   {
-    field: 'OrderID',
+    field: 'EvaluationStatus',
     headerText: 'Status',
     width: '120',
     textAlign: 'Center',
   },
 
   {
-    field: 'Location',
-    headerText: 'Recommendation',
+    field: 'Recommendation',
+    headerText: 'Evaluation',
     width: '150',
     textAlign: 'Center',
   },
@@ -1818,68 +1819,70 @@ export const employeesData = [
   //   ReportsTo: 'Carson',
   //   EmployeeImage:
   //     avatar2,
- },
+//  },
 ];
 
 export const ordersData = [
-  // {
-  //   OrderID: 10248,
-  //   CustomerName: 'Vinet',
-
-  //   TotalAmount: 32.38,
-  //   OrderItems: 'Fresh Tomato',
-  //   Location: 'USA',
-  //   Status: 'pending',
-  //   StatusBg: '#FB9678',
-  //   ProductImage:
-  //     product6,
-  // },
-  
   {
-    OrderID: 'Available',
-    CustomerName: 'Yes',
-    OverallTech: 93,
-    OrderItems: '1',
-    Location: 'Recommended',
+    EvaluationStatus: 'Available',
+    Placement: 'Yes',
+    OverallTech: 0.935,
+    EvaluationDate: '9/12/2023',
+    Recommendation: 'Recommended',
     Status: 'Low',
     StatusBg: 'green',
-    ProductImage:
-      product7,
+    Course: 'JAVA',
   },
   {
-    OrderID: 893486,
-    CustomerName: 'Anika Viseer',
-    OverallTech: 93.31,
-
-    OrderItems: 'Night Lamp',
-    Location: 'Germany',
+    EvaluationStatus: 'Available',
+    Placement: 'Yes',
+    OverallTech: 0.6075,
+    EvaluationDate: '28/11/2023',
+    Recommendation: 'Recommended',
     Status: 'Medium',
     StatusBg: 'orange',
-    ProductImage:
-      product4,
+    Course: 'JAVA',
   },
   {
-    OrderID: 748975,
-    CustomerName: 'Miron Vitold',
-    OverallTech: 0.23,
-    OrderItems: 'Healthcare Erbology',
-    Location: 'Spain',
+    EvaluationStatus: 'Not Available',
+    Placement: 'No',
+    OverallTech: 0.4525,
+    EvaluationDate: '15/11/2023',
+    Recommendation: 'Not Recommended',
     Status: 'High',
     StatusBg: 'red',
-    ProductImage:
-    product1,
+    Course: 'JAVA',
   },
-  // {
-  //   OrderID: 94757,
-  //   CustomerName: 'Omar Darobe',
-  //   TotalAmount: 95.99,
-  //   OrderItems: 'Makeup Lancome Rouge',
-  //   Location: 'USA',
-  //   Status: 'canceled',
-  //   StatusBg: '#FF5C8E',
-  //   ProductImage:
-  //     product2,
-  // },
+  {
+    EvaluationStatus: 'Available',
+    Placement: 'Yes',
+    OverallTech: 0.8525,
+    EvaluationDate: '30/10/2023',
+    Recommendation: 'Recommended',
+    Status: 'Low',
+    StatusBg: 'green',
+    Course: 'JavaScript',
+  },
+  {
+    EvaluationStatus: 'Available',
+    Placement: 'Yes',
+    OverallTech: 0.5975,
+    EvaluationDate: '20/10/2023',
+    Recommendation: 'Recommended',
+    Status: 'Medium',
+    StatusBg: 'orange',
+    Course: 'JavaScript',
+  },
+  {
+    EvaluationStatus: 'Not Available',
+    Placement: 'No',
+    OverallTech: 0.4025,
+    EvaluationDate: '7/10/2023',
+    Recommendation: 'Not Recommended',
+    Status: 'High',
+    StatusBg: 'red',
+    Course: 'JavaScript',
+  },
   // {
   //   OrderID: 944895,
   //   CustomerName: 'Lulia albu',
