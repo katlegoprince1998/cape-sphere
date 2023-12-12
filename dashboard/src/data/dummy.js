@@ -1051,7 +1051,7 @@ export const userProfileData = [
 ];
 
 export const ordersGrid = [
-<<<<<<< HEAD
+
   {
     field: 'Course',
     headerText: 'Course Name',
@@ -1066,7 +1066,7 @@ export const ordersGrid = [
     textAlign: 'Center',
     format: 'yMd',
   },
-=======
+
   // {
   //   headerText: 'Image',
   //   template: gridOrderImage,
@@ -1074,7 +1074,7 @@ export const ordersGrid = [
   //   width: '120',
   // },
  
->>>>>>> f2b3aa09b62b4fccf72b137a9b4384c9060a46eb
+
   { field: 'CustomerName',
     headerText: 'Placement Ready',
     width: '150',
