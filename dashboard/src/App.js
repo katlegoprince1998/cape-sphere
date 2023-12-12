@@ -6,13 +6,13 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Courses, Recommendations, Calendar, Grades, Stacked, Pyramid, ViewCourses, ToDo, Line, Area, Bar, Pie, Financial, ColorMapping, Notes } from './pages';
 import './App.css';
-
+import LoginForm from './components/Login';
 import { useStateContext } from './contexts/ContextProvider';
 
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
-
+  const isLoggedIn = localStorage.getItem("isLoggedIn"); // Update this based on your actual state management
   useEffect(() => {
     const currentThemeColor = localStorage.getItem('colorMode');
     const currentThemeMode = localStorage.getItem('themeMode');
@@ -24,6 +24,8 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
+      {isLoggedIn ? (
+      <div className='App'>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
@@ -96,6 +98,11 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
+    
+      </div>
+      ) : (
+        <LoginForm />
+      )}
     </div>
   );
 };
