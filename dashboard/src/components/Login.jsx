@@ -1,35 +1,37 @@
 import React, { useState } from 'react';
-import Image from "../data/logo.png";
+import {Link} from "react-router-dom";
 
-
+import Image from '../data/logo.png';
 
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch("http://localhost:5454/auth/signing", {
+    const response = await fetch('http://localhost:5454/auth/signing', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       credentials: 'include',
       body: JSON.stringify({
         email,
-        password
-      })
-      
+        password,
+      }),
     });
 
     const content = await response.json();
     console.log(content);
-    
 
+    // Check if login was successful
+    if (response.ok) {
+      // Redirect to the desired page (replace '/dashboard' with your desired route)
+      return <Link to="/courses">Link</Link>;
+    }
   };
-
-
-
   return (
     <form onSubmit={handleSubmit}>
       <div style={styles.loginContainer}>

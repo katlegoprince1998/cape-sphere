@@ -6,13 +6,13 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 import { Courses, Calendar, Grades, Stacked, Pyramid, ViewCourses, ToDo, Line, Area, Bar, Pie, Financial, ColorMapping, Notes, Evaluation } from './pages';
 import './App.css';
-import LoginForm from './components/Login';
+
 import { useStateContext } from './contexts/ContextProvider';
 
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
-  const isLoggedIn = localStorage.getItem("isLoggedIn"); // Update this based on your actual state management
+// Update this based on your actual state management
   useEffect(() => {
     const currentThemeColor = localStorage.getItem('colorMode');
     const currentThemeMode = localStorage.getItem('themeMode');
@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-      {isLoggedIn ? (
+     
       <div className='App'>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
@@ -67,6 +67,7 @@ const App = () => {
               {themeSettings && (<ThemeSettings />)}
 
               <Routes>
+                
                 {/* dashboard  */}
                 <Route path="/" element={(<Courses />)} />
                 <Route path="/courses" element={(<Courses />)} />
@@ -100,9 +101,7 @@ const App = () => {
       </BrowserRouter>
     
       </div>
-       ) : (
-        <LoginForm />
-      )} 
+      
     </div>
   );
 };

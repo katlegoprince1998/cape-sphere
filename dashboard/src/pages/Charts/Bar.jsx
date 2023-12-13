@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Header } from '../../components';
 import axios from 'axios';
 
-const Evaluation = () => {
+const Bar = () => {
   const editing = { allowDeleting: true, allowEditing: true };
 
   const [evaluation, setEvaluation] = useState([]);
@@ -65,4 +65,4 @@ const Evaluation = () => {
   );
 };
 
-export default Evaluation;
+export default Bar;

@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Header } from '../../components';
-
+import { Line } from 'react-chartjs-2'; // Import Line from react-chartjs-2
 
 const Line = () => {
-  const [mentor, setMentor] = useState([]);
+  const [grades, setGrades] = useState([]);
 
   useEffect(() => {
-    loadMentor();
+    loadGrades();
   }, []);
 
-  const loadMentor = async () => {
+  const loadGrades = async () => {
     try {
-      const result = await axios.get("http://localhost:5454/api/grade/get/grades/1");
-      setGrade(result.data);
+      const result = await axios.get('http://localhost:5454/api/grade/get/grades/1');
+      setGrades(result.data);
       console.log(result.data);
     } catch (error) {
-      console.error('Error fetching mentor data:', error);
+      console.error('Error fetching grades data:', error);
     }
   };
 
   const getChartData = () => {
-    const mentor = mentor.map((mnt) => grd.subject.name);
-    const scores = grade.map((grd) => grd.score);
+    const subjectNames = grades.map((grade) => grade.subject.name);
+    const scores = grades.map((grade) => grade.score);
 
     return {
       labels: subjectNames,
@@ -40,9 +39,9 @@ const Line = () => {
 
   return (
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
-      <Header category="Page" title="Grades" />
+      {/* Render Header component */}
       <div style={{ height: '400px', width: '80%', margin: 'auto' }}>
-        <Bar
+        <Line
           data={getChartData()}
           options={{
             scales: {

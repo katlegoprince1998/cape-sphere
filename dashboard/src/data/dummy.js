@@ -1066,20 +1066,6 @@ export const ordersGrid = [
     textAlign: 'Center',
     format: 'yMd',
   },
-
-<<<<<<< HEAD
-=======
-
-  // {
-  //   headerText: 'Image',
-  //   template: gridOrderImage,
-  //   textAlign: 'Center',
-  //   width: '120',
-  // },
- 
-
-
->>>>>>> 7fd8e84ec0baf45b54654508a48abd7d77fc7541
   { field: 'CustomerName',
     headerText: 'Placement Ready',
     width: '150',
